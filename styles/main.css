@@ -86,79 +86,111 @@ nav ul {
     transform: scale(1.2);
     opacity: 1;
 }
-.bg {
-    margin-bottom: 160px;
-}
+
+/* banner */
+
 .banner {
-    padding-top: 186px;
-    margin: 0;
-}
-.banner-box {
+	overflow: hidden;
     display: flex;
+}
+.banner-content {
+	flex: 0 0 100%;
+	display: flex;
+}
+.banner-container {
+	max-width: 1141px;
+	padding: 0px 20px;
+	margin: 0px auto;
+	display: flex;
+	align-items: center;
     position: relative;
 }
-.banner-image {
-    position: absolute;
-    left: 316px;
-    top: 31px;
+.banner-body {
+	padding-top: 25px;
+    width: 63%;
     z-index: 1;
-}
-.girlbackground {
-    position: absolute;
-    left: 667px;
-    top: -8px;
+    padding-bottom: calc(24px + 16 * ((100vw - 320px) / 1140));
+
 }
 .banner-title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
     font-size: 48px;
-    font-weight: 700;
-    color: #2B3541;
     line-height: 125%;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.049em;
     text-transform: uppercase;
-    width: 634px;
+    margin: 0px 0px 20px 0px;
+    color: #2B3541;
 }
-.banner-main-text {
-    font-weight: 300;
+.banner-subtitle {
+    font-weight: 400;
     font-size: 40px;
     line-height: 125%;
-    letter-spacing: 0.03em;
+    margin-bottom: 0;
     color: #2B3541;
-    width: 351px;
 }
-.banner-text-link {
-    margin-left: 93px;
-}
-.banner-text {
+
+.text {
+    max-width: 297px;
+    margin: 39px 0px 29px 98px;
     font-size: 18px;
-    font-weight: 300;
     line-height: 150%;
     color: #2B3541;
-    width: 297px;
-    margin-top: -18px;
-    margin-bottom: 55px;
 }
-.banner-link {
-    color: #2B3541;
-    border: none;
-    margin: 0;
-    background-color: #FBF138;
-    padding: 18px 28px;
-    font-weight: 700;
+.banner-button {
+    padding: 20px 30px;
+    position: absolute;
+    background: #FBF138;
+    box-shadow: 0px 13px 24px rgb(251 241 56 / 30%);
+    font-weight: bold;
     font-size: 16px;
     line-height: 150%;
+    text-decoration: none;
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    text-decoration: none;
+    color: #2B3541;
+    cursor: pointer;
+    transition: all .2s ease;
+    margin-left: 98px;
 }
-.banner-btn {
-    margin-top: 202px;
-    background: url(../images/arrow.svg);
-    width: 52px;
-    height: 55px;
-    border: none;
-    background-repeat: no-repeat;
-    background-size: contain;
+.banner-button:hover {
+    background-color: #2B3541;
+    box-shadow: 0px 13px 24px rgba(43, 53, 65, 0.2);
+    color: #FBF138;
+    cursor: pointer;
+}
+
+.banner-image {
+    flex: 0 0 calc(50vw - (0.4 - 0.5) * 1140px);
+    transform: translate(-111%, 0px);
+}
+
+.banner-image img {
+    max-width: 100%;
+    margin-top: 29px;
+}
+.rectangle {
+    background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
+    width: 470px;
+    height: 99.65%;
+    opacity: .2;
+    position: absolute;
+    z-index: -1;
+    margin-left: 339px;
+}
+
+.arrow {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    z-index: 1; 
+}
+
+.arrow:hover {
     cursor: pointer;
 }
 .event-header {
@@ -760,7 +792,7 @@ input[type="email"]:invalid {
     
 }
 
-.modal .social {
+.modal .social-header {
     position: absolute;
     right: 10px;
     bottom: 75px;
